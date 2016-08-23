@@ -59,5 +59,31 @@
 				});
 
 	});
+    
+    $(function() {
+       $("form[name='contact-us-form']").validate({
+           rules: {
+               name: "required",
+               _replyto: {
+                   required: true,
+                   email: true
+               },
+               message: {
+                   required: false,
+                   minlength: 10
+               }
+           },
+           messages: {
+               name: "Please enter your name",
+               email: "Please enter a valid email address",
+               message: {
+                   minlength: "Please enter enough information on the message so that we can reply with a meaningful message."
+               }
+           },
+           submitHandler: function(form) {
+               form.submit();
+           }
+       });
+    });
 
 })(jQuery);
