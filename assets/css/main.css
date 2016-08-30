@@ -1,3 +1,10 @@
+.navbar-blue {
+    background-color: #4897e5;
+    min-height: 80px;
+    border-bottom: 0px;
+}
+
+
 @import url(font-awesome.min.css);
 
 /*
